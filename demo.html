@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .service-box{
+            height: 120px;
+            width: 120px;
+            border: 1px solid black;
+            background-color: orange;
+        }
+        .active{
+
+            border: 3px solid green;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="output"></div>
+</body>
+<script>
+    const Data = [
+        {
+            id:1,
+            name:"MakeUp",
+            time:"30min",
+            price:50
+        },
+        {
+            id:2,
+            name:"HairCut",
+            time:"45min",
+            price:70
+        },
+        {
+            id:3,
+            name:"Massage",
+            time:"60min",
+            price:100
+        }
+    ];
+
+    const output = document.getElementById('output');
+
+    output.innerHTML= Data.map(item=>{
+        return `
+        <div class="service-box" data-id="${item.id}">
+            <h2>${item.name}</h2>
+            <p>Time: ${item.time}</p>
+            <p>Price: $${item.price}</p>
+        </div>
+        `
+    }).join("");
+
+    const boxes = document.querySelectorAll('.service-box');
+
+
+    boxes.forEach(box=>{
+        box.addEventListener('click',()=>{
+            box.classList.toggle('active');
+        });
+    })
+
+</script>
+</html>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</head>
+<style>
+    .mainpage {
+        height: 100%;
+        background-color: rgba(253, 232, 242, 0.489);
+    }
+
+    .card {
+        transition: transform 0.5s ease;
+    }
+
+    .card:hover {
+        transform: scale(1.05);
+        border: 2px solid rgb(250, 86, 176);
+        background-color: rgba(253, 232, 242, 0.489);
+    }
+
+    /* @media only screen and (max-width:425px) {
+            .mainbody{
+                height: 300vh;
+            }
+        } */
+</style>
+
+<body>
+    <section class="page">
+        <section class="mainpage">
+            <nav class="navbar px-5  sticky-top" style="background-color: rgba(255, 255, 255, 0.929); border: 1px rgba(128, 128, 128, 0.231) solid;">
+                <div class="d-flex  justify-content-center gap-2 align-content-center mt-2">
+
+                    <div class="icon  xmt-1">
+                        <p class="bicon  rounded-circle fw-semibold "
+                            style=" color:white; background-color: rgb(254, 74, 170); height: 30px; width: 30px; text-align: center; line-height: 30px;">
+                            B</p>
+                    </div>
+                    <div class="mainheading">
+                        <a class="navbar-brand fs-4" href="./index.html"
+                            style="font-family: 'Times New Roman', Times, serif;color: black;">Belle Salon</a>
+                    </div>
+                </div>
+
+                <div class="rightcontainer d-flex flex-row gap-3 ">
+                    <div class="checkbookingbtn mt-2">
+                        <button class="checkbookbtn  border-0 fw-medium d-flex flex-row gap-2"
+                            style="background-color: rgba(251, 155, 200, 0);color: rgb(80, 79, 79); font-family:'Montserrat', sans-serif;">
+                            <a href="./checkbooking.html"
+                                class="border-0 fw-medium d-flex flex-row gap-2 link-offset-2 link-underline link-underline-opacity-0"
+                                style="background-color: rgba(251, 155, 200, 0);color: rgb(80, 79, 79); ">
+                                <div class="bicon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-calendar4 mb-1 " viewBox="0 0 16 16">
+                                        <path
+                                            d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M2 2a1 1 0 0 0-1 1v1h14V3a1 1 0 0 0-1-1zm13 3H1v9a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1z" />
+                                    </svg>
+                                </div>
+                                <div class="bookn">Check Booking</div>
+                            </a>
+                        </button>
+                    </div>
+                    <div class="callus">
+                        <button class="calls border-0 fw-medium fs-6 p-2 rounded-5 d-flex flex-row gap-2"
+                            style=" color: white;background-color: rgb(252, 46, 142); font-family:'Montserrat', sans-serif;">
+                            <div class="cicon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-telephone " viewBox="0 0 16 16">
+                                    <path
+                                        d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z" />
+                                </svg>
+                            </div>
+                            <div class="calln">Call Us</div>
+                        </button>
+                    </div>
+                </div>
+            </nav>
+            <div class="mainbody">
+                <div
+                    class="mainbodycontainerbc d-flex flex-column justify-content-center align-items-center mt-5 gap-3">
+                    <div class="d-inline d-flex flex-column align-items-center">
+                        <div class="checkicon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="currentColor"
+                                class="bi bi-check2-circle text-success bg-success-subtle rounded-circle p-2"
+                                viewBox="0 0 16 16">
+                                <path
+                                    d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0" />
+                                <path
+                                    d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0z" />
+                            </svg>
+                        </div>
+                        <div class="mainheadingbc text-center px-3"
+                            style="font-family: 'Times New Roman', Times, serif;">
+                            <h1 class="mhcs">Booking Confirmed!</h1>
+                        </div>
+
+                        <div class="mainpageparabc text-center px-3 mx-auto"
+                            style="font-family: 'Montserrat', sans-serif; max-width: 500px; width: 100%;">
+                            <p>
+                                Select from our range of premium beauty treatments. Each service is performed by our
+                                expert team using top-quality products.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="bookcbox mb-4">
+                        <div class="rounded-3 shadow p-5"
+                            style=" max-width: max-content; font-family: 'Montserrat', sans-serif; background-color: white;">
+                            <h3>Appointment Details</h3>
+                            <hr>
+                            <h3>Services Selected</h3>
+                            <h5>Professional Makeup</h5>
+                            <div class="d-flex flex-row justify-content-between">
+                                <small>⏱ 60 min &nbsp;</small>
+                                <div class="fw-semibold">$150</div>
+                            </div>
+                            <hr>
+                            <!-- Box 2 -->
+                            <h5>Hair Styling</h5>
+                            <div class="d-flex flex-row justify-content-between">
+
+                                <small>⏱ 90 min &nbsp; </small>
+                                <div class="fw-semibold">$120</div>
+                            </div>
+                            <hr>
+
+                            <!-- Box 3 -->
+                            <h5>Relaxing Facial</h5>
+                            <div class="d-flex flex-row justify-content-between">
+                                <small>⏱ 75 min &nbsp; </small>
+
+                                <div class="fw-semibold">$100</div>
+                            </div>
+                            <hr>
+
+                            <!-- Box 4 -->
+                            <h5>Manicure & Nail Art</h5>
+                            <div class="d-flex flex-row justify-content-between">
+                                <small>⏱ 45 min &nbsp;</small>
+                                <div class="fw-semibold"> $60</div>
+                            </div>
+                            <hr>
+
+                            <!-- Box 5 -->
+                            <h5>Eyebrow Shaping</h5>
+                            <div class="d-flex flex-row justify-content-between">
+                                <small>⏱ 30 min &nbsp;</small>
+                                <div class="fw-semibold"> $40</div>
+                            </div>
+                            <hr>
+
+                            <!-- Box 6 -->
+                            <h5>Eyelash Extensions</h5>
+                            <div class="d-flex flex-row justify-content-between">
+                                <small>⏱ 120 min &nbsp; </small>
+                                <div class="fw-semibold">$200</div>
+                            </div>
+                            <hr>
+                            <div class="d-flex flex-row justify-content-between">
+                                <h3>Total (420 min)</h3>
+                                <div class="fw-semibold fs-4">$670</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pageend">
+                    <div class="container">
+                        <div class="lasthead">
+                            <h5>What's Next?</h5>
+                            <ul>
+                                <li>You'll receive a WhatsApp message within 15 minutes confirming your appointment</li>
+                                <li>We'll send you a reminder 24 hours before your appointment</li>
+                                <li>Please arrive 10 minutes early for your appointment</li>
+                                <li>You can check your booking status anytime using your WhatsApp number</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="continuebooking" style="font-family: 'Montserrat', sans-serif;">
+                    <div class="d-flex justify-content-center gap-3">
+                        <button class="btn-gh border-0 rounded-2 fw-semibold mt-5 mb-5 " style="
+                                   background-color: rgb(254, 74, 170);
+                                    max-width: 400px;
+                                    height: 55px;
+                                    font-family: 'Montserrat', sans-serif;
+                                    color: rgb(255, 253, 253);
+                                ">
+                            <a href="./index.html" style="font-family: 'Montserrat', sans-serif;
+                                    color: rgb(255, 253, 253);"
+                                class="link-offset-2 link-underline link-underline-opacity-0">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-house-door-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5" />
+                                </svg>
+                                Back to Home
+                            </a>
+                        </button>
+                        <button class="btn-cbs rounded-2 fw-semibold mt-5 mb-5"
+                            style="background-color: white ; border: 1px rgba(128, 128, 128, 0.304) solid;">
+                            <a href="./checkbooking.html" class="link-offset-2 link-underline link-underline-opacity-0"
+                                style="color: rgba(66, 65, 65, 0.863) ;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-calendar4 mb-1 " viewBox="0 0 16 16"
+                                    style="color: rgba(66, 65, 65, 0.863) ;">
+                                    <path
+                                        d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M2 2a1 1 0 0 0-1 1v1h14V3a1 1 0 0 0-1-1zm13 3H1v9a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1z" />
+                                </svg>
+                                Check Booking Status
+                            </a>
+                        </button>
+                    </div>
+                </div>
+                <hr class="mx-5" style="color: rgba(0, 0, 0, 0.308);">
+                <div class="pageend text-center pb-5">
+                    <div class="endhead" >
+                        Need to make changes or have any questions?
+                    </div>
+                    <div class="endparab mt-1 d-flex flex-lg-row flex-md-row flex-column gap-3 justify-content-center" style="font-family: 'Montserrat', sans-serif; color: rgb(254, 74, 170);;">
+                        <div class="one">
+                            Call us : (123) 456-7890
+                        </div>
+                        <div class="a" style="color: rgba(128, 128, 128, 0.219);" >|</div>
+                        <div class="two">
+                            Email Us
+                        </div>
+                </div>
+            </div>
+            </div>
+        </section>
+</body>
+
+</html>

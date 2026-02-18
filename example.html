@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .time-select,
+.dateinput,
+.phonenumber {
+    width: 100%;
+    max-width: 400px;
+    height: 45px;
+    border-radius: 12px;
+    border: 1px solid #ccc;
+    padding: 0 12px;
+}
+
+.form {
+    width: 100%;
+    max-width: 500px;
+}
+
+.box {
+    width: 100%;
+    max-width: 400px;
+}
+
+.btn-cb {
+    background-color: #fc2e8e;
+    color: white;
+    font-weight: 600;
+}
+
+</style>
+<body>
+    <form id="bookingForm">
+
+        <!-- Date -->
+        <input type="date" required>
+    
+        <!-- Time -->
+        <select class="time-select" required>
+            <option value="" disabled selected>Choose a time</option>
+            <option value="09:00">09:00</option>
+            <option value="09:30">09:30</option>
+            ...
+        </select>
+    
+        <!-- WhatsApp -->
+        <input type="text" placeholder="+1 (555) 123-4567" required>
+    
+        <button type="submit" class="btn-cb">
+            Confirm Booking
+        </button>
+    
+    </form>
+    
+</body>
+<script>
+    document.getElementById("bookingForm").addEventListener("submit", function(e) {
+        e.preventDefault(); // stop default submit
+    
+        // optional validation logic here
+    
+        window.location.href = "./bookingconfirmation.html";
+    });
+    </script>
+    
+</html>
