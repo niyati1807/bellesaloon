@@ -17,12 +17,14 @@
         background-color: rgba(253, 232, 242, 0.489);
 
     }
-    #chbtn{
+
+    #chbtn {
         font-weight: bolder;
         transition: transform 0.5s ease;
 
     }
-    #chbtn:hover{
+
+    #chbtn:hover {
         box-shadow: 0 0 15px rgba(255, 20, 147, 0.5);
         border-color: deeppink;
         transform: scale(1.05);
@@ -31,7 +33,8 @@
 
 <body>
     <section class="mainpage">
-        <nav class="navbar px-5 sticky-top" style="background-color: rgba(255, 255, 255, 0.929); border: 1px rgba(128, 128, 128, 0.231) solid;">
+        <nav class="navbar px-5 sticky-top"
+            style="background-color: rgba(255, 255, 255, 0.929); border: 1px rgba(128, 128, 128, 0.231) solid;">
             <div class="d-flex justify-content-center gap-2 align-content-center mt-2">
                 <div class="icon xmt-1">
                     <p class="bicon rounded-circle fw-semibold" style="
@@ -132,16 +135,16 @@
 
                 <div id="output"></div>
                 <div class="needhelpsection d-flex flex-column justify-content-center align-items-center mb-4"
-                style="font-family: 'Montserrat', sans-serif">
-                <div class="nhheading">
-                    <h5 class="nhhead fw-semibold mt-5">Need Help?</h5>
-                </div>
-                <div class="nhdes">
-                    If you have questions about your booking or need to make changes,
-                    please contact us.
-                </div>
-                <div class="mt-3 d-flex flex-column flex-lg-row flex-md-row align-items-center">
-                    <div class="nhbtn1">
+                    style="font-family: 'Montserrat', sans-serif">
+                    <div class="nhheading">
+                        <h5 class="nhhead fw-semibold mt-5">Need Help?</h5>
+                    </div>
+                    <div class="nhdes">
+                        If you have questions about your booking or need to make changes,
+                        please contact us.
+                    </div>
+                    <div class="mt-3 d-flex flex-column flex-lg-row flex-md-row align-items-center">
+                        <div class="nhbtn1">
                             <button class="nh1 border-0 fs-6 p-3 rounded-2 d-flex flex-row gap-2" style="
                     color: black;
                     background-color: white;
@@ -150,10 +153,10 @@
                     ">
                                 <div class="cicon">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                    class="bi bi-telephone" viewBox="0 0 16 16">
-                                    <path
-                                    d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z" />
-                                </svg>
+                                        class="bi bi-telephone" viewBox="0 0 16 16">
+                                        <path
+                                            d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z" />
+                                    </svg>
                                 </div>
                                 <div class="nh1">Call (123) 456-7890</div>
                             </button>
@@ -187,55 +190,106 @@
         chbtn.style.color = "rgba(0, 0, 0, 0.39)"; 
         }
     });
+    
     chbtn.addEventListener("click", (e) => {
         e.preventDefault();
+        
+        
         const output = document.getElementById("output");
         const num = document.getElementById("num").value;
-        const ph = localStorage.getItem("phone");
-        
-        if (num == ph) {
-            output.innerHTML = ` <div class="mt-5 formwp bg-white d-flex d-md-flex d-lg-flex flex-column justify-content-center align-items-center shadow rounded-3 p-3 px-md-4 mx-auto"
-            style="height: auto; max-width: 800px; width: 100%; font-family: 'Montserrat', sans-serif;">
-            <h3 class=" p-3 fw-bold">Your Appointment is booked</h3>
-            <p>Appointment Confirmed.</p>
-            </div>`;
-        } else {
-            output.innerHTML = `  
-            <div class="mt-5 formwp bg-white d-flex d-md-flex d-lg-flex flex-column justify-content-center align-items-center shadow rounded-3 p-3 px-md-3 mx-auto" style="height: auto; max-width: 800px; width: 100%; >
-                
-                <div class="svg rounded-circle " >
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-calendar4 p-3     rounded-4" viewBox="0 0 16 16" style="color: grey;background-color: rgba(145, 145, 145, 0.26);height: max-content; max-width: 60px;">
-                            <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M2 2a1 1 0 0 0-1 1v1h14V3a1 1 0 0 0-1-1zm13 3H1v9a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1z"/>
-                    </svg>
-                    <h5 class="mt-4">No Booking found</h5>
-                    <p>We couldn't find any appointments associated with this WhatsApp number.</p>
-                    <div class="d-flex flex-lg-row flex-md-row flex-column align-items-center gap-2">
-                        <button id="searchbtn " class="btn border-0 rounded-3 fw-medium w-100 fw-medium" 
-                            style="background-color: rgba(128, 128, 128, 0.395);
-                            max-width: 200px;
-                            height: 40px;
-                            font-family: 'Montserrat', sans-serif;
-                            color: rgba(0, 0, 0, 0.34);
-                            ">
-                            <a href="./checkbooking.html" class="link-offset-2 link-underline link-underline-opacity-0" style="color: rgba(0, 0, 0, 0.34);">Search Again</a>
-                            
-                        </button>
-                        <button class="border-0 rounded-2" style="
-                            font-family: 'Montserrat', sans-serif;
-                            color: white;
-                            background-color: rgb(252, 46, 142);
-                            width: 300px;
-                            height: 40px;
-                            ">
-                            
-                            <a href="./index.html" class="link-offset-2 link-underline link-underline-opacity-0" style="color: white;">Book New Appointment</a>
-                            
-                        </button>
+        const booking = JSON.parse(localStorage.getItem("bookingData"));
+
+        if (!booking) {
+            output.innerHTML = "<p class='mt-4 text-danger'>No booking data found.</p>";
+            return;
+        }
+
+        if (num === booking.phone) {
+
+            // Format Date
+            const formattedDate = new Date(booking.date).toLocaleDateString("en-US", {
+                weekday: "long",
+                year: "numeric",
+                month: "long",
+                day: "numeric"
+            });
+
+            // Build Services HTML
+            let servicesHTML = "";
+            let totalMinutes = 0;
+
+            booking.services.forEach(service => {
+                servicesHTML += `
+                <div class="d-flex justify-content-between mb-2">
+                    <span>${service.name}</span>
+                    <span>$${service.price}</span>
+                </div>
+            `;
+
+                totalMinutes += parseInt(service.time);
+            });
+
+            output.innerHTML = `
+        <div class="mt-5 bg-white shadow rounded-4 p-4"
+            style="max-width: 900px; width:100%; font-family: 'Montserrat', sans-serif;">
+
+            <div class="d-flex justify-content-between align-items-center gap-5 mb-3">
+                <h3 class="fw-bold">Your Appointment </h3>
+                <span style="color: deeppink; cursor:pointer;">Search Again</span>
+            </div>
+
+            <div class="p-4 rounded-4"
+                style="background-color: #f8f9fa;">
+
+                <div class="d-flex justify-content-between gap-5">
+                    <span class="badge bg-warning text-dark p-2 rounded-pill d-none d-md-block d-lg-block">
+                        Pending Confirmation
+                    </span>
+                    <span class="text-muted">
+                        Booked on ${new Date().toLocaleDateString()}
+                    </span>
+                </div>
+
+                <hr>
+
+                <div class="row mb-4">
+                    <div class="col-md-6">
+                        <small class="text-muted">Date</small>
+                        <h5>${formattedDate}</h5>
+                    </div>
+                    <div class="col-md-6 ">
+                        <small class="text-muted">Time</small>
+                        <h5>${booking.time}</h5>
                     </div>
                 </div>
-            </div>`;
-                    }
-                });
-            </script>
+
+                <hr>
+
+                <h5 class="fw-semibold mb-3">Services</h5>
+                ${servicesHTML}
+
+                <hr>
+
+                <div class="d-flex justify-content-between fw-bold fs-5">
+                    <span>Total (${totalMinutes} min)</span>
+                    <span>$${booking.totalPrice}</span>
+                </div>
+
+            </div>
+        </div>
+        `;
+
+        } else {
+
+            output.innerHTML = `
+        <div class="mt-5 text-center">
+            <h5>No Booking found</h5>
+            <p>We couldn't find any appointments associated with this WhatsApp number.</p>
+        </div>
+        `;
+        }
+    });
+
+</script>
 
 </html>
