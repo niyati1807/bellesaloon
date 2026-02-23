@@ -194,29 +194,30 @@
                                             </div>
                                             <div class="time mt-2">
                                                 <div class="time-select-wrapper">
-                                                <select class="time-select rounded-2 p-2"
-                                                style="max-width: 400px; height: 45px; border: 1px solid gray;" required>
-                                                    <option value="" selected disabled>Choose a time</option>
-                                                    <option value="09:00">09:00</option>
-                                                    <option value="09:30">09:30</option>
-                                                    <option value="10:00">10:00</option>
-                                                    <option value="10:30">10:30</option>
-                                                    <option value="11:00">11:00</option>
-                                                    <option value="11:30">11:30</option>
-                                                    <option value="12:00">12:00</option>
-                                                    <option value="12:30">12:30</option>
-                                                    <option value="13:00">13:00</option>
-                                                    <option value="13:30">13:30</option>
-                                                    <option value="14:00">14:00</option>
-                                                    <option value="14:30">14:30</option>
-                                                    <option value="15:00">15:00</option>
-                                                    <option value="15:30">15:30</option>
-                                                    <option value="16:00">16:00</option>
-                                                    <option value="16:30">16:30</option>
-                                                    <option value="17:00">17:00</option>
-                                                    <option value="17:30">17:30</option>
-                                                    <option value="18:00">18:00</option>
-                                                </select>
+                                                    <select class="time-select rounded-2 p-2" id="timeinput"
+                                                        style="max-width: 400px; height: 45px; border: 1px solid gray;"
+                                                        required>
+                                                        <option value="" selected disabled>Choose a time</option>
+                                                        <option value="09:00">09:00</option>
+                                                        <option value="09:30">09:30</option>
+                                                        <option value="10:00">10:00</option>
+                                                        <option value="10:30">10:30</option>
+                                                        <option value="11:00">11:00</option>
+                                                        <option value="11:30">11:30</option>
+                                                        <option value="12:00">12:00</option>
+                                                        <option value="12:30">12:30</option>
+                                                        <option value="13:00">13:00</option>
+                                                        <option value="13:30">13:30</option>
+                                                        <option value="14:00">14:00</option>
+                                                        <option value="14:30">14:30</option>
+                                                        <option value="15:00">15:00</option>
+                                                        <option value="15:30">15:30</option>
+                                                        <option value="16:00">16:00</option>
+                                                        <option value="16:30">16:30</option>
+                                                        <option value="17:00">17:00</option>
+                                                        <option value="17:30">17:30</option>
+                                                        <option value="18:00">18:00</option>
+                                                    </select>
 
                                                 </div>
                                             </div>
@@ -231,29 +232,25 @@
                                             </div>
 
                                             <form action="" class="phonenumber">
-                                                <input type="text"
+                                                <input type="text" id="phoneinput"
                                                     class="phonenumber mt-2 border-1 text-secondary rounded-3 w-100"
-                                                    placeholder=" +1 (555) 123-4567" 
-                                                    style="
+                                                    placeholder=" +1 (555) 123-4567" style="
                                                     max-width: 400px;
                                                     height: 45px;
                                                     font-family: 'Montserrat', sans-serif;" />
                                         </div>
                                         <p style="max-width: 400px;">We'll send you booking confirmation and updates via
                                             WhatsApp</p>
-                                        <button id="chbtn" class="fw-semibold btn-cb border-0 rounded-3 fw-medium w-100"
-                                            style="
-                                                    background-color: rgba(128, 128, 128, 0.395);
-                                                    max-width: 400px;
-                                                    height: 50px;
-                                                    font-family: 'Montserrat', sans-serif;
-                                                    color: rgba(0, 0, 0, 0.374);">
-                                            <a href="./bookingconfirmation.html"
-                                                class="link-offset-2 link-underline link-underline-opacity-0"
-                                                style="color: rgba(0, 0, 0, 0.374);">
-                                                Confirm Bookings
-                                            </a>
+                                        <button type="button" id="chbtn"
+                                            class="fw-semibold btn-cb border-0 rounded-3 fw-medium w-100" style="
+                                                background-color: rgba(128, 128, 128, 0.395);
+                                                max-width: 400px;
+                                                height: 50px;
+                                                font-family: 'Montserrat', sans-serif;
+                                                color: rgba(0, 0, 0, 0.374);">
+                                            Confirm Bookings
                                         </button>
+
                                     </form>
                                 </div>
                             </div>
@@ -288,6 +285,8 @@
 
             const selectedServices = JSON.parse(localStorage.getItem("selectedServices")) || [];
 
+            const confirmBtn = document.getElementById("chbtn");
+
             let totalPrice = 0;
 
             if (selectedServices.length === 0) {
@@ -316,8 +315,37 @@
                 });
             }
             totalPriceEl.textContent = `$${totalPrice}`;
+
+            confirmBtn.addEventListener("click", function () {
+
+                const date = document.getElementById("dateinput").value;
+                const time = document.getElementById("timeinput").value;
+                const phone = document.getElementById("phoneinput").value;
+
+                if (!date || !time || !phone) {
+                    alert("Please fill all details");
+                    return;
+                }
+
+                // Get selected services again
+                const selectedServices = JSON.parse(localStorage.getItem("selectedServices")) || [];
+
+                // Create booking object
+                const bookingData = {
+                    services: selectedServices,
+                    date: date,
+                    time: time,
+                    phone: phone,
+                    totalPrice: totalPrice
+                };
+
+                // Save booking data
+                localStorage.setItem("bookingData", JSON.stringify(bookingData));
+
+                // Redirect to confirmation page
+                window.location.href = "./bookingconfirmation.html";
+            });
         </script>
 </body>
 
 </html>
-
